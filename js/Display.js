@@ -48,10 +48,10 @@ class Display{
     }
 
     calcular(){
-        const valorAnterior = parseFloar(this.valorAnterior);
-        const valorActual = parseFloar(this.valorActual);
+        const valorAnterior = parseFloat(this.valorAnterior);
+        const valorActual = parseFloat(this.valorActual);
 
-        if(isNan(valorActual) || isNan(valorAnterior)) return
+        if(isNaN(valorActual) || isNaN(valorAnterior)) return
         this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual);
     }
 }
