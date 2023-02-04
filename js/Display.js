@@ -6,6 +6,12 @@ class Display{
         this.tipoOperacion = undefined;
         this.valorActual = '';
         this.valorAnterior = '';
+        this.signos = {
+            sumar: '+',
+            dividir: '/',
+            multiplicar: 'x',
+            restar: '-',
+        }
     }
 
     borrar(){
@@ -38,7 +44,7 @@ class Display{
 
     imprimirValores(){
         this.displayValorActual.textContent = this.valorActual;
-        this.displayValorAnterior.textContent = ``;
+        this.displayValorAnterior.textContent = `${this.valorAnterior} ${this.signos[this.tipoOperacion] || ''}`;
     }
 
     calcular(){
